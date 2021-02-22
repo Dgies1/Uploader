@@ -34,10 +34,8 @@ const build = () => {
     let files = [
         "./src/app/**/*.*",
         "./src/config/**/*.*",
-        "./src/public/css/*.css"
+        "./src/public/css/*.css",
     ];
-
-
     return gulp.src(files, {
         base: "./src/"
     }).pipe(gulp.dest('./dist/'))
