@@ -1,0 +1,26 @@
+{
+  "name": "Express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-nw-builder": "^1.4.0",
+    "gulp-sass": "^4.1.0"
+  }
+}
