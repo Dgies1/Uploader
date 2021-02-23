@@ -35,32 +35,22 @@ const build = () => {
         "./src/app/**/*.*",
         "./src/config/**/*.*",
         "./src/public/css/*.css",
-    ];
+        "./src/package.json"
+        ];
     return gulp.src(files, {
         base: "./src/"
-    }).pipe(gulp.dest('./dist/'))
+    })
+    .pipe(gulp.src('./app.js'))
+    .pipe(gulp.dest('./dist/'))
 
 
 }
 
-const dev = ()=>{
-
-
-        return gulp.src(['./dist/**/*'])
-          .pipe(builder({
-              version: 'v0.55.2',
-              platforms: ['win32']
-           }));
-
-
-}
 
 
 exports.sass = gulp.series(css, combineCss);
 
-exports.build = build;
-
-exports.nw = gulp.series(css, combineCss,build,dev)
+exports.build = gulp.series(build,css, combineCss);;
 
 exports.peek = () => {
     gulp.watch('./src/public/css/sass/*.scss', gulp.series(css, combineCss));
