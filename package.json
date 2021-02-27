@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp build; cd dist; npm install; nw dist/",
+    "dev": "gulp build; cd dist; npm install;cd ..; nw dist/",
     "prod": "gulp build; cd dist; npm install;cd ..;nwbuild --platforms win32 --buildDir build/ dist/"
   },
   "keywords": [],
@@ -23,7 +23,10 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-flatten": "^0.4.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
     "gulp-nw-builder": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0"
   }
 }
